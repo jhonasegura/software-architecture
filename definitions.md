@@ -55,6 +55,44 @@ Es importante que diferenciemos el ROL del puesto de trabajo, hay roles que pued
 
 * **Gestor del proyecto / facilitador:** Llevan al equipo a través del proceso iterativo e incremental, entender lo que pasa con el equipo y motivar el avance en el desarrollo del producto.
 
+## Arquitectyra y Metodologías
+
+![Metodologias](pictures/metodologias.PNG)
+
+## Entender el problema
+
+La parte más importante es separar la comprensión del problema de la propuesta de solución. Ciertas cuestiones tecnológicas como la plataforma o la arquitectura en general o el estilo a implementar como parte del problema cuando en realidad son detalles de implementación.
+
+![Metodologias](pictures/problema.PNG)
 
 
+![Metodologias](pictures/entender-problema.jpg)
 
+## Requerimientos de producto
+
+Los podemos dividir en tres.
+
+![](pictures/requerimiento.PNG)
+
+• Capa de requerimientos de negocio, son reglas del negocio que alimentan los requerimientos del negocio.
+
+• Capa de usuario, tienen que ver en cómo el usuario se desenvuelve usando el sistema, qué atributos del sistema se deben poner por encima de otros.
+
+• Capa Funcional, se ven alimentados por requerimientos del sistema, ¿qué cosas tienen que pasar operativamente?
+Esta capa se ve afectada por las restricciones que pueden afectar operativamente a lo funcional.
+
+## Requerimientos de proyecto
+
+![](pictures/requerimiento-proyecto.PNG)
+
+• Tienen que ver más con el rol de gestor de proyectos, se usan para dar prioridad a los requerimientos del producto.
+
+• Estos dos mundos de requerimientos hablan de las prioridades del equipo de trabajo del proyecto.
+
+• Tiene que ver con requerimientos logísticos, que no tienen que ver con el desarrollo del software.
+
+## Requerimientos Significativos para la Arquitectura del Producto:
+
+• Requerimientos funcionales: (Funciones indispensables) Tienen que ver con las historias de usuarios, que hablan sobre específicamente lo que hace el sistema, por ejemplo que un usuario ingrese al sistema.
+
+• Requerimientos no funcionales: (Atributos de calidad): son aquellos que agregan cualidades al sistema, por ejemplo que el ingreso de ese usuario sea de manera segura.
