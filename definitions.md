@@ -91,8 +91,27 @@ Esta capa se ve afectada por las restricciones que pueden afectar operativamente
 
 • Tiene que ver con requerimientos logísticos, que no tienen que ver con el desarrollo del software.
 
-## Requerimientos Significativos para la Arquitectura del Producto:
+## Requerimientos Significativos para la Arquitectura del Producto
 
 • Requerimientos funcionales: (Funciones indispensables) Tienen que ver con las historias de usuarios, que hablan sobre específicamente lo que hace el sistema, por ejemplo que un usuario ingrese al sistema.
 
 • Requerimientos no funcionales: (Atributos de calidad): son aquellos que agregan cualidades al sistema, por ejemplo que el ingreso de ese usuario sea de manera segura.
+
+## Riesgos
+
+Es necesario identificar los riesgos para poder priorizarlos y atacarlos en orden y asegurar que las soluciones arquitectónicas que propongamos resuelvan los problemas más importantes.
+
+Identificación de los riesgos:
+
+• Toma de Requerimientos (Requerimientos funcionales):
+Se calificará su riesgo de acuerdo a su dificultad o complejidad.
+
+• Atributos de calidad (Requerimientos NO funcionales):
+Se calificará su riesgo de acuerdo a la incertidumbre que genere, cuanto mas incertidumbre hay, mas alto es el riesgo.
+
+• Conocimiento del dominio:
+Riesgo prototípico, son aquellos que podemos atacar de forma estándar.
+
+![riesgos](pictures/riesgos.PNG)
+
+No es necesario mitigarlos todos, debemos siempre tener en cuenta y dar prioridad a aquellos riesgos que ponen en peligro la solución que se está construyendo.
