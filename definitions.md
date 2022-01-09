@@ -115,3 +115,24 @@ Riesgo prototípico, son aquellos que podemos atacar de forma estándar.
 ![riesgos](pictures/riesgos.PNG)
 
 No es necesario mitigarlos todos, debemos siempre tener en cuenta y dar prioridad a aquellos riesgos que ponen en peligro la solución que se está construyendo.
+
+## Restricciones
+
+En el contexto de un proceso de desarrollo de software se refiere a las restricciones que limitan las opciones de diseño o implementaciones disponibles al desarrollar.
+
+Los **StakeHolders**, nos pueden poner limitaciones relacionadas con su contexto de negocio, ejemplo:
+
+• Las limitaciones legales, la implementación de un producto podría tener restricciones en algún país, y esto seria una limitante a considerar para el desarrollo del producto.
+
+• Limitaciones técnicas, relacionadas con integraciones con otros sistemas.
+
+• El ciclo de vida del producto, agregará limitaciones al producto, por ejemplo a medida que avanza el proceso de implementación el modelo de datos va a ser más difícil de modificar.
+
+![restricciones](pictures/restricciones.PNG)
+
+Nota:
+El arquitecto debe balancear entre los requerimiento y las restricciones.
+
+## Arquitectura, Panorama y Definición
+
+Un estilo de arquitectura es una colección de decisiones de diseño, aplicables en un contexto determinado, que restringen las decisiones arquitectónicas específicas en ese contexto y obtienen beneficios en cada sistema resultante.
