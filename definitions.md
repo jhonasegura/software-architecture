@@ -136,3 +136,144 @@ El arquitecto debe balancear entre los requerimiento y las restricciones.
 ## Arquitectura, Panorama y Definición
 
 Un estilo de arquitectura es una colección de decisiones de diseño, aplicables en un contexto determinado, que restringen las decisiones arquitectónicas específicas en ese contexto y obtienen beneficios en cada sistema resultante.
+
+Ningún patrón tiene solo beneficios ni trae la solución a todos los software.
+
+## Estilos Arquitectónicos
+
+### Llamado y Retorno
+
+Cada uno de los componentes hacen invocaciones a los componentes externos y estos retornan información. Cada componente hace un llamado y espera una respuesta.
+
+![llamado-y-retorno](pictures/llamado-retorno.PNG)
+
+* **Programa principal y subrutinas:** Es el estilo más básico donde se tiene una rutina y se manda a llamar otra subrutina en donde la subrutina puede retornar o no un resultado, pero la rutina principal continua hasta que acabe la subrutina.
+
+* **Orientada a Objetos:** Una versión con esteroides del estilo anterior. Se utiliza para aplicaciones que vamos a mantener por mucho tiempo. Tratamos de juntar el estado de la aplicación creando objetos los cuales tienen una interfaz publica (interfaz en este caso se refiere a una definición de funciones o estructura que esta clase puede implementar) donde la llamada no es solo una subrutina, sino objetos que interactuán entre si.
+
+* **Arquitectura multinivel:** Son diferentes componentes que se van a comunicar en un orden en especifico donde un componente principal crea el llamado a un componente inferior en algún momento, un ejemplo de esto son las aplicaciones cliente-servidor.
+
+### Flujo de Datos
+
+No estamos preocupados por la secuencia de ejecución sino por como los datos van a ir de un lugar a otro.
+
+![flujo-de-datos](pictures/flujo-datos.PNG)
+
+• **Lote secuencial:** Lo importante es ejecutar una pieza de código y que el final de esa pieza ya procesada pase a una siguiente etapa.
+
+• **Tubos y filtros:** Se tiene un string o un flujo de datos continuo en donde cada aplicación recibe continuamente esos datos los procesa y los hace como salida a otra aplicación o al final de la ejecución.
+
+Nota:
+
+En el estilo de flujo de datos lo que se tiene son diferentes aplicaciones que van a estar conectadas en general en tiempo real por lo tanto ya no se necesita interacción con el usuario para decidir cuándo empieza un proceso o cuando termina otro.
+
+Cuando usamos el estilo de arquitectura de flujo de datos:
+
+• Cuando tenemos un proceso que tiene que tener una salida clara pero que puede ser separado en partes en donde tenemos parte a parte lo que necesitamos hacer.
+
+• Cuando necesitamos un stream de entrada parte a parte ir procesándolo y tener una salida al final del túnel.
+ 
+### Centradas en Datos
+
+![centrada-en-datos](pictures/centrada-datos.PNG)
+
+* **Estilo de pizarrón.** permite centralizar los datos en una sola base de datos, alimentada por varias partes involucradas, una vez que todas las partes interesadas ingresan los datos, el sistema centralizado genera una salida.
+
+* **Estilo Centralizado.** En este caso el sistema posee los datos centralizados en una base de datos, y hay dos (02) sistemas que comparten la misma base de datos.
+
+* **Estilo Basado en Reglas.** En este caso el sistema que centraliza los datos, tiene la capacidad de entender los datos y consultas que realiza el cliente, generando salidas inteligentes. (inteligencia artificial).
+
+### Componentes Independientes
+
+![componentes-independientes](pictures/componentes-independientes.PNG)
+
+* **Invocación Implícita:** Tiene que ver con que nuestra aplicación puedan mandar mensajes entre si, sin que sepa a quien le esta hablando.
+
+* **Invocación Explícita:** Tiene que ver con el desarrollo de componentes que si se conocen entre si, pero que sean desarrollado independientemente.
+
+ARQUITECTURA ORIENTADAS A SERVICIOS:
+El Enterprise Services Busses, sabe que proceso tiene que llevar a cabo para lograr su cometido, dando a los componentes la información que éstos requieran. El ESB, es inteligente.
+
+Es necesario tener en cuenta que cualquier actualización del sistema, mantiene conectado a los componentes que brindan servicios de consulta.
+
+## Comparación de Estilos
+
+![comparacion-estilo](pictures/comparacion-estilos.PNG)
+
+**Estilos Monolíticos.**
+
+* Es más fácil darle prioridad a la eficiencia de las comunicaciones.
+
+* Son más fáciles de probar.
+
+* Curva de aprendizaje son más fáciles, todas las piezas estan en el mismo lugar. (Los microservicios son fáciles de entender).
+
+* La capacidad de modificación es más fácil.
+
+* La modularización es más fácil de romper, por lo que es más fácil no garantizar esa separación a largo plazo.
+
+* En la usabilidad, es mas costoso, porque habría que respaldar toda la aplicación y no pequeños microservicios.
+
+* Puede ser un desafío para el despliegue, porque habría que garantizar que toda la aplicación o sistema se adapta a ese contexto específico.
+
+**Estilos Distribuidos.**
+
+* Es más fácil darle prioridad a la eficiencia de las comunicaciones.
+
+* Para hacer una prueba de principio a fin hay que tener todos los componentes disponibles .
+
+* La curva de aprendizaje es más difícil, porque habría que entender todas las piezas de los componentes.
+
+* Al ser desplegadas independientemente, son versionadas independientemente, y esta variación de serviones hace mas complejo su modificación.
+
+* La modularidad, es más fácil porque los componentes que son desplegados independiente.
+
+* La disponibilidad se pueden tener multiples copias del sistema. por lo que este disponible es mas barato.
+
+* La adaptabilidad es más fácil en el despliegue porque los componente se despliegan independientemente en múltiples contextos.
+
+## Desarrollo de Proyecto
+
+se comienza con los requerimientos del sistema:
+
+Criterio de éxito:
+
+Conectar rápidamente a un cliente con un profesional de confianza.
+Garantizar el aumento del volúmen de trabajo al profesional.
+Idea: Definición de una forma ideal de como se satisface una necesidad. Ejemplo: Tener una forma mucho más sencilla de solicitar un servicio de plomería que llegue a mi casa con un plomero que se conozca.
+
+-Historias de usuarios: Definir las experiencias que los usuarios han tenido respecto a la solución de su necesidad. Ejemplo:
+
+Experiencia de un cliente x: quiero contactar a un profesional en el momento para reparar un problema en mi hogar.
+Experiencia de un cliente y: quiero conocer la experiencia del profesional para decidir a quien contacto.
+Experiencia de un profesional x: quiero cobrar mi trabajo realizado para seguir prestando el servicio.
+Experiencia de un profesional y: necesito tener más repertorio de personas para ampliar mi currículo de trabajo y flujo del mismo.
+Requerimientos más técnicos:
+
+Etapas de la prestación de servicio:
+Solicitar, aceptar y finalizar una prestación de servicio de forma segura.
+Comunicación: La forma en como el cliente solicita el servicio a su hogar.
+Evaluación: Como se evalua los profesionales y clientes para futuros tiempos
+Riesgos
+
+Son referentes a historias de los usuarios.
+
+Ejemplo:
+
+El cliente utiliza un servicio y no completa el pago en un tiempo determinado
+
+La persona que solicita el servicio no puede confirmar quien es la persona
+
+Restricciones
+
+Limites que tiene nuestro proyecto de acuerdo a variables.
+
+Ejemplo:
+
+Recursos disponibles para el desarrollo: programadores, equipos de cómputo, energía, comida, lugar de trabajo, servicios públicos, etc.
+
+Registro de impuestos del profesional: Que el profesional cumpla con el pago de impuestos ante las instituciones.
+
+Antecedentes penales: que el profesional cuente con ser un ciudadano ejemplar dentro de la ley.
+
+Teniendo en cuenta todas las restricciones y requerimientos que existe, lo más adecuado es montar una arquitectura cliente-servidor dentro de la web que permite de una manera mucho más sencilla la automatización de procesos.
