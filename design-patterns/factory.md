@@ -1,0 +1,2 @@
+# Patrón de Diseño Factory
+
