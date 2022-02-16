@@ -277,3 +277,16 @@ Registro de impuestos del profesional: Que el profesional cumpla con el pago de 
 Antecedentes penales: que el profesional cuente con ser un ciudadano ejemplar dentro de la ley.
 
 Teniendo en cuenta todas las restricciones y requerimientos que existe, lo más adecuado es montar una arquitectura cliente-servidor dentro de la web que permite de una manera mucho más sencilla la automatización de procesos.
+
+
+## SOLID
+
+* **Single Responsibility (Responsabilidad Única).** Indica que cada clase debería tener una sola responsabilidad, para de esta forma asegurarnos que la haga muy bien.
+
+* **Open Closed (Abierto Cerrado).** Una entidad debe quedarse abierta para su extensión pero cerrada para su modificación, suele implementar para su uso la herencia y polimorfismo.
+
+* **Liskov Substitution (Sustitución de Liskov).** Toda clase que es hija de otra clase, debe poder utilizarse como si fuera el mismo padre. Para ello suele utilizar interfaces (diseño por componentes).
+
+* **Interface Segregation (Segregación de la Interfaz).** Es mejor tener muchas clases pequeñas y especializadas, que una clase enorme.
+
+* **Dependency Inversion (Inversión de la Dependencia).** Los módulos de alto nivel no deberían depender de los módulos de bajo nivel, sino de interfaces (abstracción).
