@@ -40,4 +40,21 @@ Una de sus principales características es que nos permite guardar nuestras estr
 
 Por ser una base de datos distribuida, se puede hablar de varios servidores o como se conoce con el nombre de Cluster de MongoDB. Gracias a esto se obtiene una gran escalabilidad de forma horizontal.
 
+![mongodb-structure](/pictures/mongodb-structure.PNG)
+
 MongoDB es "Schema Less" lo que permite que los documentos tengan estructuras diferentes sin afectar su funcionamiento, algo que no se puede hacer con las tablas de las bases de datos relacionales. Su lenguaje para realizar queries, índices y agregaciones es muy expresivo.
+
+![mongodb-queries](/pictures/mongodb-queries.PNG)
+
+Entre los proveedores que permiten utilizar o alquilar MongoDB como servicio está MongoDB Atlas, los cuales son los mismos desarrolladores de MongoDB.
+
+Entre sus características está:
+
+* Aprovisionamiento automático de clusters con MongoDB.
+* Alta disponibilidad.
+* Altamente escalable.
+* Seguro.
+* Disponible en AWS, GCP y Microsoft Azure.
+* Fácil monitoreo y optimización.
+
+
