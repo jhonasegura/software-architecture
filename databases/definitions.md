@@ -57,4 +57,17 @@ Entre sus características está:
 * Disponible en AWS, GCP y Microsoft Azure.
 * Fácil monitoreo y optimización.
 
+![arquitectura-mongodb](/pictures/arquitectura-mongodb.PNG)
+
+### Bases de Datos
+Son los contenedores físicos para las colecciones. Cada base de datos tiene un archivo propio en el sistema de archivos de cada computadora o servidor y un Cluster puede tener múltiples bases de datos.
+
+### Colecciones
+Son agrupaciones de documentos. Son equivalentes a las tablas en bases de datos relacionaes pero NO imponen un esquema o estructura rígida para guardar información.
+
+### Documentos
+Son registros dentro de las colecciones. Son la unidad básica de MongoDB y son análogos a los objetos JSON pero en realidad son BSON.
+
+**La estructura sería la siguiente:**
+![mongodb-coleccion](/pictures/mongodb-coleccion.PNG)
 
