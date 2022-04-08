@@ -71,3 +71,47 @@ Son registros dentro de las colecciones. Son la unidad básica de MongoDB y son 
 **La estructura sería la siguiente:**
 ![mongodb-coleccion](/pictures/mongodb-coleccion.PNG)
 
+Ruta para ejecutar la consola en local de MongoDB.
+
+C:\Program Files\MongoDB\Server\5.0\bin
+
+**Ejecutar el archivo .exe**
+
+![mongodb-ruta-exe](/pictures/mongodb-ruta-exe.PNG)
+
+**Consola local de MongoDB**
+
+![mongodb-consola](/pictures/mongodb-consola.PNG)
+
+Insertar un registro.
+
+    > db.inventory.insertOne({ item: "canvas", qty: 100, tags: ["cotton"], size: { h: 28, w: 35.5, uom: "cm"}})
+
+![mongodb-comman-struct](/pictures/mongodb-comman-struct.jpg)
+
+
+![mongodb-comman-struct](/pictures/mongodb-comman-struct-2.jpg)
+
+Instrucciones y comandos:
+
+Conexión con el cluster de MongoDB Atlas: mongo "URL DE NUESTRO CLUSTER", (recuerda añadir tu IP a la lista de IPs permitidas para no tener problemas en esta parte).
+
+Listar las bases de datos de nuestro cluster: show dbs.
+
+Seleccionar una base de datos: use NOMBRE_BD. Debemos crear por lo menos un documento si la base de datos es nueva porque MongoDB no crea bases de datos vacías.
+
+Recordar qué base de datos estamos usando: db.
+
+Listar las colecciones de nuestra base de datos: show collections.
+
+Crear una colección (opcional) y añadir un elemento en formato JSON: db.NOMBRE_COLECCIÓN.insertOne({ ... }). La base de datos responde true si la operación fue exitosa y crea el campo irrepetible de _id si nosotros no lo especificamos.
+
+Crear una colección (opcional) y añadir algunos elementos en formato JSON: db.NOMBRE_COLECCIÓN.insertMany([{ ... }, { ... }]). Recibe un array de elementos y devuelve todos los IDs de los elementos que se crearon correctamente.
+
+Encontrar elementos en una colección: db.NOMBRE_COLECCIÓN.find() Podemos aplicar filtros si queremos o encontrar solo el primer resultado con el método findOne().
+
+Listar todos los posibles comandos que podemos ejecutar: db.NOMBRE_COLECCIÓN.help().
+
+
+
+
