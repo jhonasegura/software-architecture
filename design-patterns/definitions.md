@@ -9,3 +9,11 @@ Un patrón de diseño define una solución a un problema recurrente y esta soluc
 * **Estructurales.** Ayudan a la hora de configurar relaciones entre objetos. Da una forma especial de organizar las entidades asumiendo que queda entidad puede tener entidades dentro suyo de forma recursiva,
 
 * **De Comportamiento.** Realizan interacción entre clases u objetos de forma que se pueda distribuir las responsabilidades de cada uno de forma mucho más organizada. 
+
+## Qué es un microservicio?
+
+Es un estilo de arquitectura que estructura una aplicación como una colección de servicios que son:
+
+* Altamente mantenibles y testeables.
+* Independientemente desplegables.
+* Organizados alrededor de la lógica del negocios (dominios).
