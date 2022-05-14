@@ -18,10 +18,9 @@ Docker permite entregar código con mayor rapidez, estandarizar las operaciones 
 
 * **Ahorrar dinero**.
 
-
-
-
 ## Comandos Útiles
+
+!['docker-commands'](/pictures/docker-commands.jpeg)
 
 Ejecutar primero comando para verificar funcionamiento de Docker.
 
@@ -60,9 +59,13 @@ Borra todos lo contenedores que esten parados.
     $ docker container prune
 
 Comandos:
-$ docker run ubuntu (corre un ubuntu pero lo deja apagado)
-$ docker ps -a (lista todos los contenedores)
-$ docker -it ubuntu (lo corre y entro al shell de ubuntu)
+
+    $ docker run ubuntu (corre un ubuntu pero lo deja apagado)
+
+    $ docker ps -a (lista todos los contenedores)
+
+    $ docker -it ubuntu (lo corre y entro al shell de ubuntu)
+
 -i: interactivo
 -t: abre la consola
 
@@ -70,31 +73,46 @@ $ docker -it ubuntu (lo corre y entro al shell de ubuntu)
 
 Comandos:
 
-$ docker run -d --name proxy nginx (corro un nginx)
-$ docker stop proxy (apaga el contenedor)
-$ docker rm proxy (borro el contenedor)
-$ docker rm -f <contenedor> (lo para y lo borra)
-$ docker run -d --name proxy -p 8080:80 nginx (corro un nginx y expongo el puerto 80 del contenedor en el puerto 8080 de mi máquina)
+    $ docker run -d --name proxy nginx (corro un nginx)
+
+    $ docker stop proxy (apaga el contenedor)
+    
+    $ docker rm proxy (borro el contenedor)
+
+    $ docker rm -f <contenedor> (lo para y lo borra)
+
+    $ docker run -d --name proxy -p 8080:80 nginx (corro un nginx y expongo el puerto 80 del contenedor en el puerto 8080 de mi máquina)
+
 localhost:8080 (desde mi navegador compruebo que funcione)
-$ docker logs proxy (veo los logs)
-$ docker logs -f proxy (hago un follow del log)
-$ docker logs --tail 10 -f proxy (veo y sigo solo las 10 últimas entradas del log)
+
+    $ docker logs proxy (veo los logs)
+
+    $ docker logs -f proxy (hago un follow del log)
+
+    $ docker logs --tail 10 -f proxy (veo y sigo solo las 10 últimas entradas del log)
 
 
 Comandos:
 
-$ mkdir dockerdata (creo un directorio en mi máquina)
-$ docker run -d --name db mongo
-$ docker ps (veo los contenedores activos)
-$ docker exec -it db bash (entro al bash del contenedor)
-$ mongo (me conecto a la BBDD)
+    $ mkdir dockerdata (creo un directorio en mi máquina)
 
-shows dbs (listo las BBDD)
-use platzi ( creo la BBDD platzi)
-db.users.insert({“nombre”:“guido”}) (inserto un nuevo dato)
-db.users.find() (veo el dato que cargué)
-$ docker run -d --name db -v <path de mi maquina>:<path dentro del contenedor(/data/db mongo)> (corro un contenedor de mongo y creo un bind mount)
+    $ docker run -d --name db mongo
+    
+    $ docker ps (veo los contenedores activos)
 
+    $ docker exec -it db bash (entro al bash del contenedor)
+
+    $ mongo (me conecto a la BBDD)
+
+    $ shows dbs (listo las BBDD)
+
+    $ use platzi ( creo la BBDD platzi)
+
+    $ db.users.insert({“nombre”:“guido”}) (inserto un nuevo dato)
+
+    $ db.users.find() (veo el dato que cargué)
+
+    $ docker run -d --name db -v <path de mi maquina>:<path dentro del contenedor(/data/db mongo)> (corro un contenedor de mongo y creo un bind mount)
 
 ## Bibliografía
 
