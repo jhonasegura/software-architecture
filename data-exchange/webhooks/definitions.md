@@ -12,8 +12,16 @@ Las APIs funcionan con una técnica de sondeo, un proceso por el cual el servido
 
 Este método es más eficiente que revisar constantemente una aplicación para ver si han habido cambios.
 
+## ¿Qué Debo Usar?
+
+Hay que tener claro que no son elecciones excluyentes. Las APIs tienen sus usos y los webhooks otros distintos, auqnue a veces se puedan solapar.
+
+Aunque con webhooks se puedan obtener datos y ejecutar acciones, po regla general las APIs están más orientadas a esto último. Si la operación tiene que ver con un usuario concreto o una acción individual, lo más normal es que haya un webhook apropiado. Si lo que se necesita es consultar información puntualmente, se tendrá que usar un API.
+
 ## Bibliografía 
 
 * https://es.sendinblue.com/blog/que-es-un-webhook/#:~:text=Un%20webhook%20(tambi%C3%A9n%20conocido%20como,o%20aplicaci%C3%B3n%20en%20tiempo%20real.
+
+* https://www.campusmvp.es/recursos/post/que-son-los-webhooks-en-que-se-diferencian-de-una-api-rest-y-por-que-deberias-conocerlos.aspx
 
 * https://www.campusmvp.es/recursos/post/que-son-los-webhooks-en-que-se-diferencian-de-una-api-rest-y-por-que-deberias-conocerlos.aspx
