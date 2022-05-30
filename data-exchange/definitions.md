@@ -52,6 +52,10 @@ Los objetos o entidades de la base de datos virtual creada en el ORM podrá ser 
 
 * Es posible que las configuraciones sean tediosas, teniendo que importar, instalar, actualizar o generar nuevos archivos.
 
+## WSDL (Web Services Description Language)
+
+Es una especificación estándar para describir servicios basados en XML de red. Proporciona a los proveedores de servicios un modo sencillo de describir el formato básico de las peticiones a sus sistemas independientemente de la implementación del motor de ejecución subyacente.
+
 
 ## Bibliography
 
@@ -59,3 +63,4 @@ Los objetos o entidades de la base de datos virtual creada en el ORM podrá ser 
 * https://www.instintoprogramador.com.mx/2020/12/crud-vs-rest-cual-es-la-diferencia.html
 * https://www2.deloitte.com/es/es/pages/technology/articles/que-es-orm.html
 * https://codigofacilito.com/articulos/orm-explicacion
+* https://www.ibm.com/docs/es/rsas/7.5.0?topic=standards-web-services-description-language-wsdl
